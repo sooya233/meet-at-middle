@@ -1,4 +1,5 @@
 #top {
+    position: relative;
     width: 100%;
     height: 8%;
     border-bottom: 2px solid #C4C4C4;
@@ -18,6 +19,17 @@
     background: white;
 }
 
+#text{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    
+}
+
 .rect{
     width: 98%;
     height: 90%;
@@ -29,3 +41,9 @@
     font-size: 25px;
 }
 
+.previous{
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    margin-top: -15px;
+}
