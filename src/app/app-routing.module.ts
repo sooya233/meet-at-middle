@@ -15,6 +15,14 @@ const routes: Routes = [
     path: 'loading',
     loadChildren: () => import('./loading/loading.module').then( m => m.LoadingPageModule)
   },
+  {
+    path: 'finding',
+    loadChildren: () => import('./finding/finding.module').then( m => m.FindingPageModule)
+  },
+  {
+    path: 'find-page',
+    loadChildren: () => import('./find-page/find-page.module').then( m => m.FindPagePageModule)
+  },
 ];
 
 @NgModule({

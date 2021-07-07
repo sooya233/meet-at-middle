@@ -6,16 +6,22 @@
 }
 
 #text {
-    font-size: 40px;
+    left: 25%;
+    top: 40%;
+    font-size: 20px;
     position: absolute;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family: Tinne;
+    font-style: normal;
+    font-weight: bold;
 }
 
 #logo {
+    left: 50%;
+    top: 30%;
+    margin-left: -50px;
+    margin-top: -50px;
     position: absolute;
     display: table-cell;
     vertical-align: middle;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
