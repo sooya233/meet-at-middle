@@ -1,0 +1,48 @@
+#metromap{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+}
+
+#circle{
+  position: absolute;
+  top: 85%;
+  left: 75%;
+}
+
+#top {
+  width: 100%;
+  height: 8%;
+  border-bottom: 2px solid #C4C4C4;
+  background-color: #ffffff;
+}
+
+#textbox {
+  padding-left: 10%;
+}
+
+.find {
+  margin-top: 2%;
+  position: absolute;
+  width: 88%;
+  right: 1%;
+  font-size: 1.375rem;
+  background-color: #F0F0F0;
+  border: 1px solid gray;
+  color: gray;
+}
+
+.svg {
+  width: 600%;
+  height: 600%;
+}
+
+.button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 90px;
+  position: absolute;
+  background: #A6C1EE;
+
+}

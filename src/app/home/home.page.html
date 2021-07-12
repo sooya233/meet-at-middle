@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+  <div id = "top">
+    <div id = "textbox">
+      <form>
+        <input type = "text" name = "search" value = "역 찾기" class = "find">
+      </form>
+    </div>
+  </div>
+  <div id="metromap">
+    <object data="./assets/mapimage.svg" type="image/svg+xml" aria-label="지도" class = "svg"></object>
+  </div>
+  <div id="circle">
+    <button (click)="gotoFindPage()" block>
+      <img src="./assets/find.png">
+    </button>
+  </div>
+</ion-content>
