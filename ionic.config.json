@@ -1,5 +1,8 @@
 {
   "name": "MeetAtMiddle",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

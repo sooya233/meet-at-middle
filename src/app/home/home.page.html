@@ -1,4 +1,4 @@
-<ion-content [fullscreen]="true">
+<ion-content>
   <div id = "top">
     <div id = "textbox">
       <form>
@@ -7,10 +7,19 @@
       </form>
     </div>
   </div>
-  <div id="metromap">
-    <!--object data="./assets/mapimage.svg" type="image/svg+xml" aria-label="지도" class = "svg"></object-->
+
+  <!--
+  <div id="metromap" class="swiper-zoom-contatiner">
     <iframe src="./assets/mapimage.svg" aria-label="지도" class="svg"></iframe>
   </div>
+-->
+  <div id="metromap">
+  <ion-slides [options]="sliderOpt">
+  <ion-slide>
+    <img src="./assets/mapimage.svg" aria-label="지도" /> 
+  </ion-slide></ion-slides>
+  </div>
+
   <div id="circle">
     <button (click)="gotoFindPage()" block class = "button">
       <img src="./assets/find.png">

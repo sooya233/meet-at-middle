@@ -8,6 +8,12 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
+  sliderOpt = {
+    zoom: {
+      maxRatio: 10,
+    }
+  }
+
   constructor(public router:Router) {}
   gotoFindPage() {
     this.router.navigateByUrl('/find-page');
