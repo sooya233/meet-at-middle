@@ -2,7 +2,8 @@
   <div id = "top">
     <div id = "textbox">
       <form>
-        <input type = "text" name = "search" value = "역 찾기" class = "find">
+        <input type = "search" name = "search" placeholder = "역 찾기" class = "find" 
+        onfocus="this.placeholder=''" onblur="this.placeholder='역 찾기'">
       </form>
     </div>
   </div>
@@ -10,7 +11,7 @@
     <object data="./assets/mapimage.svg" type="image/svg+xml" aria-label="지도" class = "svg"></object>
   </div>
   <div id="circle">
-    <button (click)="gotoFindPage()" block>
+    <button (click)="gotoFindPage()" block class = "button">
       <img src="./assets/find.png">
     </button>
   </div>
