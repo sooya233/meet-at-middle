@@ -22,7 +22,11 @@ const routes: Routes = [
   {
     path: 'find-page',
     loadChildren: () => import('./find-page/find-page.module').then( m => m.FindPagePageModule)
+  },  {
+    path: 'result',
+    loadChildren: () => import('./result/result.module').then( m => m.ResultPageModule)
   },
+
 ];
 
 @NgModule({

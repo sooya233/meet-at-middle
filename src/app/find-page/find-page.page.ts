@@ -14,6 +14,10 @@ export class FindPagePage implements OnInit {
     this.router.navigateByUrl('/home');
   }
 
+  gotoFindingPage() {
+    this.router.navigateByUrl('/finding');
+  }
+
   ngOnInit() {
   }
 

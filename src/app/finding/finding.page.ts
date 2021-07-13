@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-finding',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FindingPage implements OnInit {
 
-  constructor() { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
+    setTimeout(() => {
+      this.router.navigateByUrl('/result')
+    }, 2000);
   }
 
 }
