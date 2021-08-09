@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
+import { global } from "../global"
 
 @Component({
   selector: 'app-home',
@@ -25,7 +26,21 @@ export class HomePage {
       cssClass: 'basic-alert',
       header: station,
       message: "선택한 역이 맞습니까?",
-      buttons: ['Yes', 'No'],
+      buttons: [
+        {
+          text: "Yes",
+          handler: () => {
+            global.stations.push(station)
+            console.log(global);
+          }
+        },
+        {
+          text: "No",
+          handler: () => {
+            console.log('Confirm No');
+          }
+        }
+      ]
     });
 
     await alert.present();

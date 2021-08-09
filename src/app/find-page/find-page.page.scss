@@ -17,6 +17,7 @@
     width: 100%;
     height: 8%;
     background: white;
+    position: absolute;
 }
 
 #text{
@@ -47,4 +48,11 @@
     left: 2%;
     top: 50%;
     margin-top: -15px;
+}
+
+#station {
+    width: 100%;
+    height: 8%;
+    background: white;
+    border-bottom: 1px solid #C4C4C4;
 }

@@ -9,8 +9,15 @@
       선택한 역
     </div>
   </div>
-  <div id = "lists">
-
+  <div id='lists'>
+    <ion-content 
+    [scrollEvents]="true"> 
+    <ion-list>  
+    <ion-item *ngFor="let item of items"> 
+    <ion-label>{{ item }}</ion-label> 
+    </ion-item> 
+    </ion-list> 
+    </ion-content>  
   </div>
   <div id = "find">
     <button class = "rect" type="button" (click)="gotoFindingPage()" block>

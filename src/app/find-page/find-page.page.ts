@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { global } from '../global';
+import { IonContent } from '@ionic/angular';
 
 @Component({
   selector: 'app-find-page',
@@ -7,8 +9,32 @@ import { Router } from '@angular/router';
   styleUrls: ['./find-page.page.scss'],
 })
 export class FindPagePage implements OnInit {
+  items = [];
+  //constructor(public router:Router) {
+  //}
 
-  constructor(public router:Router) { }
+  @ViewChild(IonContent, {static: false}) content: IonContent;  
+  constructor( public router:Router
+  ) { 
+    for(let i = 0; i < global.stations.length; ++i) {
+      this.items.push(global.stations[i]);
+    }
+  } 
+  logScrollStart() { 
+  console.log('logScrollStart : Scroll Starts'); 
+  } 
+  logScrolling() {  
+  console.log('logScrolling : Scrolling'); 
+  } 
+  logScrollEnd() { 
+  console.log('logScrollEnd : Scroll Ends'); 
+  } 
+  ScrollToBottom() { 
+  this.content.scrollToBottom(800); 
+  } 
+  ScrollToTop() { 
+  this.content.scrollToTop(800); 
+  }
 
   gotoHomePage() {
     this.router.navigateByUrl('/home');
