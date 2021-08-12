@@ -30,8 +30,12 @@ export class HomePage {
         {
           text: "Yes",
           handler: () => {
-            global.stations.push(station)
-            console.log(global);
+            const index = global.stations.indexOf(station);
+            if(index != -1) this.DuplicatedStationAlert();
+            else{
+              global.stations.push(station)
+              console.log(global);
+            }
           }
         },
         {
@@ -42,6 +46,16 @@ export class HomePage {
         }
       ]
     });
+
+    await alert.present();
+  }
+
+  async DuplicatedStationAlert() {
+    const alert = await this.alertController.create({
+      header: "NONOStation",
+      message: "이미 존재하는 역입니다",
+      buttons: ['OK']
+    })
 
     await alert.present();
   }

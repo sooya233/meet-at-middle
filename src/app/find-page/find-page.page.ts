@@ -18,6 +18,7 @@ export class FindPagePage implements OnInit {
   ) { 
     for(let i = 0; i < global.stations.length; ++i) {
       this.items.push(global.stations[i]);
+      
     }
   } 
   logScrollStart() { 
@@ -34,6 +35,18 @@ export class FindPagePage implements OnInit {
   } 
   ScrollToTop() { 
   this.content.scrollToTop(800); 
+  }
+
+ 
+  deleteStation(station:string) {
+    console.log(station);
+    const index = global.stations.indexOf(station);
+    console.log(index);
+    
+    if(index > -1) {
+      global.stations.splice(index, 1);
+      this.items.splice(index, 1);
+    }
   }
 
   gotoHomePage() {
